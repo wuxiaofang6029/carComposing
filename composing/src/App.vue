@@ -5,13 +5,14 @@
       <p><img src="./assets/header_liebiao.png" alt=""></p>
     </div>
     <div class="ban">
-      <img src="./assets/ban.png" alt="">
+      <img src="http://picture.eclicks.cn/g1/l/2018/04/17/2e324eb8e740788b_2633_960.png" alt="">
     </div>
     <div class="nav_tab">
-      <span>分析评论</span>
-      <span>趋势榜单</span>
-      <span>研究报告</span>
+      <router-link to='/comment'><span class='nav_active'>分析评论</span></router-link>
+      <router-link to=''><span>趋势榜单</span></router-link>
+      <router-link to=''><span>研究报告</span></router-link>
     </div>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -35,6 +36,7 @@
     
     a {
         text-decoration: none;
+        color: #666;
     }
     
     html,
@@ -47,8 +49,6 @@
     #app {
         width: 100%;
         height: 100%;
-        display: flex;
-        flex-direction: column;
     }
     
     .m_header {
@@ -64,22 +64,33 @@
     
     .ban {
         width: 100%;
+        height: 260px;
     }
     
     .ban img {
         width: 100%;
+        height: 100%;
         display: block;
     }
     
     .nav_tab {
         width: 100%;
         height: 50px;
-        padding: 0 15px;
-        box-sizing: border-box;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         color: #999;
         font-weight: 800;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .nav_tab span {
+        display: inline-block;
+        height: 100%;
+        line-height: 50px;
+    }
+    
+    .nav_tab .nav_active {
+        border-bottom: 3px solid #3aaffd;
     }
 </style>
