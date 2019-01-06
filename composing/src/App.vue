@@ -1,12 +1,27 @@
 <template>
   <div id="app">
-    <div class="m_header">
+    <div class="m_header min">
       <p><img src="./assets/header_logo.jpg" alt=""></p>
       <p><img src="./assets/header_liebiao.png" alt=""></p>
     </div>
-    <div class="ban">
-      <img src="http://picture.eclicks.cn/g1/l/2018/04/17/2e324eb8e740788b_2633_960.png" alt="">
+    <div class="m_p_header max">
+      <p><img src="./assets/h_login.jpg" alt=""></p>
+      <ul class='t_l'>
+        <li>产品</li>
+        <li>关于我们</li>
+        <li>大数据</li>
+        <li>新闻</li>
+        <li>招聘</li>
+        <li>商城</li>
+        <li>登录/注册</li>
+      </ul>
     </div>
+    <div class="ban min">
+      <img src="./assets/ban.png" alt="">
+    </div>
+    <div class="m_p_ban max">
+            <img src="./assets/max_bg.jpg" alt="">
+          </div>
     <div class="nav_tab">
       <router-link to='/comment'><span class='nav_active'>分析评论</span></router-link>
       <router-link to=''><span>趋势榜单</span></router-link>
@@ -26,12 +41,6 @@
     * {
         margin: 0;
         padding: 0;
-    }
-    
-    ul,
-    ol,
-    li {
-        list-style: None;
     }
     
     a {
@@ -92,5 +101,50 @@
     
     .nav_tab .nav_active {
         border-bottom: 3px solid #3aaffd;
+    }
+    
+    @media screen and (max-width:1000px) {
+        .max {
+            display: none;
+        }
+    }
+    
+    @media screen and (min-width:1000px) {
+        .min {
+            display: none;
+        }
+        .m_p_header {
+            width: 100%;
+            height: 100px;
+            background: #5a7ffd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #666;
+        }
+        .t_l {
+            display: flex;
+            list-style: none;
+            margin-left: 100px;
+        }
+        .t_l li {
+            margin: 0 20px;
+            font-size: 16px;
+        }
+        .m_p_header p img {
+            vertical-align: middle;
+        }
+        .m_p_ban {
+            width: 100%;
+        }
+        .m_p_ban img {
+            width: 100%;
+            display: flex;
+            height: auto;
+        }
+        .nav_tab {
+            margin: 0 auto;
+            width: 1000px;
+        }
     }
 </style>
