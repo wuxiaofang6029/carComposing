@@ -113,15 +113,15 @@
         <div class="comment_hot">
           <p>最热</p>
           <ul>
-            <li><span>•</span>新车市场的新阵地：三四线汽车消费者画像（上）</li>
-            <li><span>•</span>大数据在热销车型预测领域的初探</li>
-            <li><span>•</span>90后女性车主的崛起带来了汽车个性化的春天</li>
-            <li><span>•</span>流言终结！宝马车主都是暴发户么？</li>
-            <li><span>•</span>人以类聚，车以群分</li>
-            <li><span>•</span>中低端SUV之战进入下半场</li>
-            <li><span>•</span>华南被日系车占领那些年</li>
-            <li><span>•</span>大数据细说换车背后的无形推手</li>
-            <li><span>•</span>捕获保时捷车主的大数据攻略</li>
+            <li>新车市场的新阵地：三四线汽车消费者画像（上）</li>
+            <li>大数据在热销车型预测领域的初探</li>
+            <li>90后女性车主的崛起带来了汽车个性化的春天</li>
+            <li>流言终结！宝马车主都是暴发户么？</li>
+            <li>人以类聚，车以群分</li>
+            <li>中低端SUV之战进入下半场</li>
+            <li>华南被日系车占领那些年</li>
+            <li>大数据细说换车背后的无形推手</li>
+            <li>捕获保时捷车主的大数据攻略</li>
           </ul>
         </div>
    </div>
@@ -242,7 +242,7 @@
     
     .comment_hot {
         width: 100%;
-        padding: 0 6px;
+        padding: 0 3px;
         box-sizing: border-box;
     }
     
@@ -258,12 +258,15 @@
     
     .comment_hot ul {
         width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
     }
     
     .comment_hot ul li {
         height: 30px;
         line-height: 30px;
         color: #333;
+        list-style: square;
     }
     
     .comment_hot ul li span {
@@ -325,5 +328,22 @@
         width: 26px;
         height: 26px;
         vertical-align: middle;
+    }
+    
+    @media screen and (min-width:1000px) {
+        .comment_list {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .comment_content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .comment_hot {
+            width: 550px;
+        }
+        .comment_hot ul li {
+            background: rgb(250, 247, 247);
+        }
     }
 </style>

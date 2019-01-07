@@ -24,8 +24,8 @@
           </div>
     <div class="nav_tab">
       <router-link to='/comment'><span class='nav_active'>分析评论</span></router-link>
-      <router-link to=''><span>趋势榜单</span></router-link>
-      <router-link to=''><span>研究报告</span></router-link>
+      <router-link to='/tread'><span>趋势榜单</span></router-link>
+      <router-link to='/study'><span>研究报告</span></router-link>
     </div>
     <router-view></router-view>
   </div>
@@ -99,7 +99,7 @@
         line-height: 50px;
     }
     
-    .nav_tab .nav_active {
+    .router-link-exact-active {
         border-bottom: 3px solid #3aaffd;
     }
     
@@ -121,6 +121,9 @@
             justify-content: center;
             align-items: center;
             border-bottom: 1px solid #666;
+        }
+        .nav_tab {
+            height: 70px;
         }
         .t_l {
             display: flex;
